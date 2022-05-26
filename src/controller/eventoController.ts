@@ -77,19 +77,17 @@ Route.post('/gerarRelatorioConv',entidadeAuth,async (req:Request, resp: Response
                 
                               
                             const { genero, idadeinicial, idadeFinal} = req.body;  
-                            console.log(idadeinicial);
-                            console.log(idadeFinal);
-                            console.log(genero);   
+                             
                             var idc = req.session?.user.id;
                         const entidades= await knex('entidades').where('id',idc); 
                                                      
                             if(genero==''){
-                                console.log('1');
+                               
                                 const convidados= await knex('convidados').whereBetween('idade', [idadeinicial, idadeFinal])
                                 const eventos= await knex('eventos').select('*') 
                                 resp.render('empresa/relatorioConv', { eventos, convidados, entidade:entidades[0]})   
                             }else{
-                                console.log('2');
+                                
                                 const convidados= await knex('convidados').whereIn('idade', [idadeinicial, idadeFinal]).andWhere('genero', genero)
                                 const eventos= await knex('eventos').select('*') 
                                 resp.render('empresa/relatorioConv', { eventos, convidados, entidade:entidades[0]})   
