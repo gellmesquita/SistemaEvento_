@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCESS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+       .swiper-container {
+      width: 100%;
+      height: 80vh;
+
+    }
+
+    .btnseemore{
+
+      width: 200px;
+    }
+    /* .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    } */
+    </style>
+</head>
+<body>
+    
+
+    <div class="container-fluid">
+        <header class="p-3 bg-white mb-3 border-bottom">
+            <div class="container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" style="font-family: forte;" class="d-flex fs-5 me-md-4 text-dark fw-bolder align-items-center mb-2 mb-lg-0 text- text-decoration-none">
+            <i class="fa fa-buysellads text-primary fs-1 me-1"></i> ACCESS
+                </a>
+        
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
+                  <li class="dropdown"><a href="#" class="nav-link px-2 link-secondary dropdown-toggle" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Lugares</a>
+                  
+                    <ul class="dropdown-menu mx-0 shadow" style="width: 220px;">
+                      <li>
+                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                          <i class="fa fa-map-marker text-primary"></i>
+                          Viana
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                          <i class="fa fa-map-marker text-primary"></i>
+                          Cazenga
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                          <i class="fa fa-map-marker text-primary"></i>
+                          Belas
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                          <i class="fa fa-map-marker text-primary"></i>
+                          Lobito
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                          <i class="fa fa-map-marker text-primary"></i>
+                          Kilamba
+                        </a>
+                      </li>
+                    </ul>
+                  
+                  </li>
+                  <li><a href="#" class="nav-link px-2 link-secondary">Contactar</a></li>
+                  <li><a href="#" class="nav-link px-2 link-secondary">Sobre</a></li>
+                </ul>
+        
+  
+
+                <form class="col-12 d-flex align-items-center col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                  <!--  -->
+                  <input type="search" class="form-control rounded-pill" placeholder="Pesquisar eventos, shows, teatros..." aria-label="Search">
+<i class="fa fa-search ms-2 fs-5 text-" style="transform: rotate(95deg);"></i>
+                </form>
+        
+         
+              </div>
+            </div>
+          </header>
+          <div class="modal animated-fast zoomIn" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content"  style="border-radius: 15px !important;">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Enviar dados para a EMPRESA</h5>
+                  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+               <form action="#">
+                <div class="modal-body">
+             
+<div class="mb-2">
+  <label for="nome">Nome</label>
+  <input type="text" id="nome" class="form-control rounded-pill" placeholder="Insira o seu nome" aria-label="name">
+</div>
+<div class="mb-2">
+  <label for="idade">Idade</label>
+  <input type="number" id="idade" class="form-control rounded-pill" placeholder="Insira a sua idade atual" aria-label="idade">
+</div>
+<div class="mb-2">
+  <label for="endereco">Endereço</label>
+  <input type="text" id="endereco" class="form-control rounded-pill" placeholder="Insira a sua localização" aria-label="endereco">
+</div>
+
+<div class="mb-2">
+  <label for="customFile">Fotografia</label>
+  <input type="file" class="form-control rounded-pill" id="customFile">
+</div>
+<div class="mb-2">
+  <label for="telefone">Número</label>
+  <input type="number" id="telefone" class="form-control rounded-pill" placeholder="Insira o seu número de telefone" aria-label="number">
+</div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary rounded-pill">Enviar dados</button>
+                </div></form>
+              </div>
+            </div>
+          </div>
+          <main>
+           <section>
+       <div class="container px-4 d-flex justify-content-between align-items-end pb-3" style="border-radius: 15px; background: url('img/gal_img_full_2.jpg'); background-size: cover; height:60vh">
+
+<div class="display-6 text-white-50">
+  <div class="text-white fs-3">
+ 
+    <a href="" class="text-white"><i class="fa fa-facebook-square px-2 py-2 rounded-pill border"></i></a>
+    <a href="" class="text-white"><i class="fa fa-whatsapp px-2 py-2 rounded-pill border"></i></a>
+    <a href="" class="text-white"><i class="fa fa-instagram  px-2 py-2 rounded-pill border"></i></a>
+   
+   </div> 
+</div>
+<button class="btn btnseemore btn-outline-light py-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Solicitar vaga</button>
+
+       </div>
+           </section>
+           <section class="py-5 container">
+               <h1 class="fw-bold">NOME DO EVENTO</h1>
+               <p class="mb-1 text-muted">tipo: pública</p>
+             <p class="mb-1 text-muted">data: 28 de abril de 2022, 19h30-21h30</p>
+             <div class="mb-1 text-muted">local: <button class="border rounded-pill">Kinaxixi</button> <button class="border rounded-pill">maisespecifico</button></div>
+             
+<div class="p-3 shadow-sm border mt-5 d-flex flex-column lead" style="border-radius: 15px;">
+<span class="fw-bold">Descrição do evento</span>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus molestias omnis eius corporis nemo, laborum architecto! Quia voluptatibus quae recusandae ab cupiditate culpa veritatis! Qui, numquam. Unde aut blanditiis deserunt.
+</div>
+
+           </section>
+
+      
+<section class="container-fluid border-top py-5 bg-light">
+<div class="container d-flex pb-5 justify-content-center align-items-center flex-column">
+<h1 class="display-6 mb-5 text-">CONTACTE A ORGANIZAÇÃO</h1>
+<img src="img/gal_img_full_1.jpg" alt="" style="width: 100px; height: 100px;" class="rounded-pill mb-2">
+<h2>Nome da organização</h2>
+<p class="text-center">
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum similique consequatur fuga beatae in quia rerum, accusamus omnis! Quia repellat temporibus quibusdam accusamus magni quae soluta. Aperiam ab id eos!
+
+</p>
+
+<div class="d-flex mt-3 justify-content-center">
+    <button class="border py-2 px-2 me-2 rounded"><i class="fa fa-envelope me-1"></i> FALE COM A ORG.</button>
+    <button class="border py-2 px-2 rounded"><i class="fa fa-plus me-1"></i> MAIS EVENTOS</button>
+</div>
+</div>
+</section>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+        </main>
+
+
+        <div class="container">
+          <footer class="py-5">
+            <div class="row">
+              <div class="col-2">
+                <h5>Encontre eventos</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Hoje</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Amanhã</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Esta semana</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Este fim de semana</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Este mês</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-2">
+                <h5>Cidades</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Luanda</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Benguela</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cunene</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Huambo</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cabinda</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-2">
+                <h5>Categoria</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Festas e shows</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Teatros e espetáculos</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Conferências</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Esporte</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gastronomia</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Infantil</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Arte cultura e lazer</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Moda e Beleza</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Educação</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-4 offset-1">
+                <form>
+                  <h5>Subscreva à nossa newsletter</h5>
+                  <p>Receba todas as actualizações dos nossos eventos por email</p>
+                  <div class="d-flex w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Insira aqui o email</label>
+                    <input id="newsletter1" type="text" class="form-control rounded-pill" placeholder="riadla@siarom.com">
+                    <button class="btn btn-primary rounded-pill" type="button">Enviar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+              <p>© ACCESS 2022, Inc. todos os direitos autorais.</p>
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+    </div>
+
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

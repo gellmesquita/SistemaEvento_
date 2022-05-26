@@ -1,0 +1,64 @@
+<div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-2">
+          <h5>Encontre eventos</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Hoje</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Amanhã</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Esta semana</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Este fim de semana</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Este mês</a></li>
+          </ul>
+        </div>
+
+        <div class="col-2">
+          <h5>Cidades</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Luanda</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Rangel</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cazenga</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kilamba Quiaxi</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cacuaco</a></li>
+          </ul>
+        </div>
+
+        <div class="col-2">
+          <h5>Categoria</h5>
+          <ul class="nav flex-column">
+            <% categoria.map(cat=>{%>
+              <li class="nav-item mb-2"><a href="/categoria/<%= cat.nomeCategoria %>" class="nav-link p-0 text-muted"><%= cat.nomeCategoria %> </a></li>   
+        
+              <%} ) %> 
+          </ul>
+        </div>
+
+        <div class="col-4 offset-1">
+          <form>
+            <h5>Subscreva à nossa newsletter</h5>
+            <p>Receba todas as actualizações dos nossos eventos por email</p>
+            <div class="d-flex w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Insira aqui o email</label>
+              <input id="newsletter1" type="text" class="form-control rounded-pill" placeholder="riadla@siarom.com">
+              <button class="btn btn-primary rounded-pill" type="button">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between py-4 my-4 border-top">
+        <p>© ACCESS 2022, Inc. todos os direitos autorais.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>

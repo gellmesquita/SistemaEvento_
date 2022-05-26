@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/hover.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 80vh;
+
+    }
+
+    .btnseemore {
+
+      width: 200px;
+    }
+
+    /* .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    } */
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container-fluid">
+    <%- include ("./header.ejs") %>
+    <main class="pt-5 pt-md-4">
+      <section class="pt-5 pt-md-4">
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="img/download2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+                height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold lh-1 mb-3">Crie e viva experiências únicas quando e onde quiser</h1>
+              <p class="lead">Aprenda, divirta-se ou empreenda com eventos presenciais, online e conteúdos gravados.</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary rounded-pill btn px-4 me-md-2"><a class=""
+                    href="/cadastroPromotor" style="cursor: pointer; text-decoration: none; color: white">Crie seus
+                    eventos</a></button>
+                <button type="button" class="btn btn-outline-dark rounded-pill btn px-4">Saiba mais!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container-fluid bg-light py-5">
+        <section class="container">
+          <p class="mb-1">Categoria de Eventos</p>
+          <h5 class="fw-bold mb-4">Olhe o que temos para sí</h5>
+          <div class="row align-items-center">
+
+
+            <div class="col-md-6 p-5 bg-white shadow rounded-3 h-75">
+              <div class=" d-flex justify-content-around flex-wrap ">
+
+
+                <div class="text-center me-2">
+                  <img src="img/jj.jpeg" style="width: 110px; height: 110px;"
+                    class="bg-warning rounded-pill hvr-grow">
+                  <p>Infantil</p>
+                </div>
+                <div class="text-center me-2">
+                  <img src="img/festas.jpg" style="width: 110px; height: 110px;"
+                    class="bg-warning rounded-pill hvr-grow">
+                  <p>Festas e shows</p>
+                </div>
+                <div class="text-center me-2">
+                  <img src="img/dd.jpg" style="width: 110px; height: 110px;"
+                    class="bg-warning rounded-pill hvr-grow">
+                  <p>Conferências</p>
+                </div>
+                <div class="text-center me-2">
+                   <img src="img/eventos-001.jpg" style="width: 110px; height: 110px;"
+                    class="bg-warning rounded-pill hvr-grow">
+                  <p>Esporte</p>
+                </div>
+                <div class="text-center me-2"><img src="img/comida.jpeg" style="width: 110px; height: 110px;"
+                    class="bg-warning rounded-pill hvr-grow">
+                 
+                  <p>Gastronomia</p>
+                </div>
+                <div class="text-center me-2">
+                  <img src="img/lazer.jpeg" style="width: 110px; height: 110px;"
+                    class="bg-warning rounded-pill hvr-grow">
+                  <p>Arte, exposição</p>
+                </div>
+                <div class="text-center me-2">
+                  <img src="img/moda.jpg" style="width: 110px; height: 110px;"
+                    class="bg-warning rounded-pill hvr-grow">
+                  <p>Moda e Beleza</p>
+                </div>
+                <div class="text-center me-2">
+                  <img src="img/casamenots.jpg" style="width: 110px; height: 110px;"
+                    class="bg-warning rounded-pill hvr-grow">
+                  <p>Casamentos</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <h1 class="display-5 ms-md-5 mt-5 mt-md-0">
+                Fique ligado a todos os eventos e atividades da nossa empresa
+              </h1>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="container-fluid pt-5">
+        <div class="swiper-container p-5">
+          <h5 class="mb-3 fw-bold">Destaques de eventos</h5>
+
+          <div class="swiper-wrapper">
+            <% eventos.reverse().slice(0, 4).map(evento=>{%>
+            
+              <div class="swiper-slide  d-flex justify-content-end flex-column px-4 pb-3 text-white"
+              style="background-image: url('http://localhost:1000/upload/<%= evento.image %>'); background-size: cover; border-radius: 15px !important;">
+              <h2><%= evento.name %></h2>
+              <p class="text-white-50"><%= evento.desc %> </p>
+              <button onclick="window.location='/viewevento/<%= evento.id %>'"  class="btn btnseemore btn-outline-light py-2 rounded-pill">VER MAIS DETALHES</button>
+              </div>         
+            
+              <%} ) %> 
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+        </div>
+      </section> 
+
+
+      <section class="container mt-5 pt-3">
+        <div class="">
+          <h5 class="mb-3">Categora de Eventos: Conferências</h5>
+
+          <div class="row">
+            <% eventos.filter(c=>c.tipo=="Conferências").reverse().slice(0, 4).map(evento=>{%>
+              <div class="col-md-3 mb-3 h-100">
+                <div class="card shadow p-2">
+                  <img height="200vh" src="http://localhost:1000/upload/<%= evento.image %>"  alt="">
+                  <div>
+                    <p class="text-danger mt-2 mb-0" style="font-size:14px"><%= evento.endereco %>, <%= evento.data %></p>
+                    <p class="mb-0"><%= evento.name %></p>
+                    <span><%= evento.desc.substring(0, 50) %>...</span>
+                    <br>
+                    <a style="text-decoration: none;" href="/viewevento/<%= evento.id %>">ver mais...</a>
+                  </div>
+                </div>
+              </div>                
+            
+              <%} ) %> 
+          </div>
+
+
+        </div>
+      </section>
+
+
+      <div class="container my-5">
+        <div
+          class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 bg-dark text-white rounded-3 border shadow-lg">
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1">Um outro nível com as nossas <span class="text-primary">pulseiras</span>
+            </h1>
+            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
+              popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
+              extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold rounded-pill">Saiba mais</button>
+
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+            <!-- <img class="rounded-lg-3" src="img/client_3.png" alt="" width="720"> -->
+            <i class="fa fa-circle-o-notch" style="font-size: 15em;"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- 
+<section class="container-fluid pt-5">
+  <div class="swiper-container p-5">
+    <h5 class="mb-3 fw-bold">Destaques em Angola</h5>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide d-flex justify-content-end flex-column px-4 pb-3 text-white" style="background-image: url('img/gal_img_full_2.jpg'); background-size: cover; border-radius: 15px !important;"> 
+      <h2>NOME DO SHOW</h2>
+      <p class="text-white-50">um pouco mais sobre a descrição do show...</p>
+      <button class="btn btnseemore btn-outline-light py-2 rounded-pill">VER MAIS DETALHES</button>
+      </div>
+      <div class="swiper-slide  d-flex justify-content-end flex-column px-4 pb-3 text-white" style="background-image: url('img/gal_img_full_2.jpg'); background-size: cover; border-radius: 15px !important;"> 
+      <h2>NOME DO SHOW</h2>
+      <p class="text-white-50">um pouco mais sobre a descrição do show...</p>
+      <button class="btn btnseemore btn-outline-light py-2 rounded-pill">VER MAIS DETALHES</button>
+      </div>
+      <div class="swiper-slide  d-flex justify-content-end flex-column px-4 pb-3 text-white" style="background-image: url('img/gal_img_full_2.jpg'); background-size: cover; border-radius: 15px !important;"> 
+      <h2>NOME DO SHOW</h2>
+      <p class="text-white-50">um pouco mais sobre a descrição do show...</p>
+      <button class="btn btnseemore btn-outline-light py-2 rounded-pill">VER MAIS DETALHES</button>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+  </div>
+  </section> -->
+
+
+  <section class=" bg-light mt-5 py-5">
+    <div class="container">
+      <h5 class="mb-3">Tipos diversos categoria de Eventos</h5>
+
+      <div class="row">
+        <% eventos.filter(c=>(c.tipo=="Outros" || c.tipo!=="Conferências")).reverse().slice(0, 4).map(evento=>{%>
+          <div class="col-md-3 mb-3 h-100">
+            <div class="card shadow p-2">
+              <img height="200vh" src="http://localhost:1000/upload/<%= evento.image %>"  alt="">
+              <div>
+                <p class="text-danger mt-2 mb-0" style="font-size:14px"><%= evento.endereco %>, <%= evento.data %></p>
+                <p class="mb-0"><%= evento.name %></p>
+                <span><%= evento.desc.substring(0, 50) %>...</span>
+                <br>
+                <a style="text-decoration: none;" href="/viewevento/<%= evento.id %>">ver mais...</a>
+              </div>
+            </div>
+          </div>                
+        
+          <%} ) %> 
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+
+
+
+
+  </main>
+
+
+  <%- include ("./footer.ejs") %>
+  </div>
+
+  <script src="js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script src="https://use.fontawesome.com/3504e7b20a.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

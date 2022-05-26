@@ -1,0 +1,283 @@
+:root {
+  --BgcolorBlueDefault: #00005a;
+  --colorTextBlueDefault: #00005a;
+  --colorTred: #e20c32;
+  --colorBgred: #e20c32;
+  --Bdred: #e20c32;
+  --fullScreen: 100vh;
+  --cursorPointer: pointer;
+  --fontMontsrrat: 'Montserrat', sans-serif; 
+
+  --firstColorDefault: #00005a;
+  --secondColorDefault: #E20C32;
+  --firstBlackColorDefault: #333;
+  --secondBlackColorDefault: #00005a;
+  --cursorPointer: pointer;
+--bot: 12px;
+}
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  overflow: hidden;
+}
+
+.fsbutt{
+  font-size: 1.1em;
+}
+
+.butt{
+  padding-top:var(--bot) !important;
+  padding-bottom:var(--bot) !important;
+}
+
+/*NAVEGAÇÃO*/
+.nav-item a:hover{
+  border-bottom: 2px solid #E20C32;
+}
+.nav-item a{
+  border-bottom: 2px solid transparent;
+}
+
+/*NAV/sign in & sing up/*/
+
+header{
+  background-color: var(--firstColorDefault);
+}
+
+.button-box{
+  width: 220px;
+  position: relative;
+  /*box-shadow: 0 0 20px 9px #E20C32;*/
+  border-radius: 30px;
+  background-color: white;
+  text-align: center;
+}
+
+.btn-sign{
+  padding: 8px 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+button.btn-sign.signup{
+  background-color: #E20C32;
+  color: white;
+  border-radius: 30px;
+  width: 100%;
+}
+
+button.btn-sign.signin{
+  border-radius: 30px;
+  width: 100%;
+}
+
+button.btn-sign.signup:hover{
+  background-color: #b40021;
+  transition: ease-in-out .5s;
+}
+
+
+/*HERO*/
+.hero{
+  background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://images.pexels.com/photos/5940708/pexels-photo-5940708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  height: 115vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: white;
+  padding-top: 14% !important;
+  /* padding-bottom: 18%; */
+  padding-left: 5px;
+}
+.hero .col2{
+  padding-left: 50%;
+}
+
+/*HERO/ title/*/
+h1{
+  font-size: 4rem;
+  font-family: 'Josefin Sans', sans-serif; 
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*HERO/btn-ptimary/*/
+.btn-primary{
+  background-color: #E20C32;
+  border-radius: 20px;
+  padding: 10px 50px 10px 50px;
+  border: none;
+}
+
+.btn-primary:hover{
+  background-color: #c40326;
+}
+
+
+/*HERO /botao play/*/
+.play{
+  text-decoration: none;
+  color: #E20C32;
+  padding: 20px;
+  border-radius: 100px;
+  border:2px solid #E20C32;
+}
+
+.play:hover{
+  color: white;
+  border:2px solid white;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+body{
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+width: 6px;
+background:   #fff;
+border-radius: 100px;
+padding: 5px 1px !important;
+transition: 2s;
+}
+
+
+.scrolledited{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.scrolledited::-webkit-scrollbar {
+width: 6px;
+background:   #fff;
+border-radius: 100px;
+padding: 5px 1px !important;
+transition: 2s;
+}
+
+.scrolledited::-webkit-scrollbar-thumb {
+  padding: 5px 1px;
+  width: 0px;
+  background:#ccc;
+  border-radius: 100px;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transition: 2s;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  }
+
+.msrrt {
+  font-family: var(--fontMontsrrat);
+}
+
+ul{
+  list-style: none;
+ }
+
+ .carousel-indicators [data-bs-target] {
+   background-color: #e20c32 !important;
+   width: 130px !important;
+ }
+
+ .carousel-indicators{
+   bottom: -28px !important;
+ }
+
+
+body::-webkit-scrollbar-thumb {
+padding: 5px 1px;
+width: 0px;
+background:#ccc;
+border-radius: 100px;
+border-right: 1px solid transparent;
+border-left: 1px solid transparent;
+transition: 2s;
+border-top: 5px solid transparent;
+border-bottom: 5px solid transparent;
+}
+
+.BgpadraoBlue {
+  background: var(--BgcolorBlueDefault);
+}
+
+.redTxt {
+  color: var(--colorTred);
+}
+
+.redBg {
+  background-color: var(--colorBgred);
+}
+
+.bored {
+  border-color: var(--Bdred);
+}
+.fullScreen {
+  height: var(--fullScreen);
+}
+
+.cp{
+  cursor: var(--cursorPointer);
+}
+
+.textpadraoblue {
+  color: var(--colorTextBlueDefault);
+}
+
+
+.switch {
+  height: 40px;
+}
+
+.cont .outer {
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.outer #form {
+  width: 200%;
+  position: relative;
+  display: flex;
+  margin: auto;
+  transition: 0.2s ease-in-out;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+#page1 {
+  /* margin:56px 0 0; */
+  width: 100%;
+}
+#page2 {
+  margin: auto;
+  width: 100%;
+}
+
+.element svg {
+  position: absolute;
+  left: 23px;
+  top: 13px;
+  font-size: 17px;
+}
+
+
+#btn:active{
+transform: scale(1.01);
+}
+a{
+text-decoration: none;
+}
+.lst a:hover{
+color:#ccc !important;
+}
+
+
